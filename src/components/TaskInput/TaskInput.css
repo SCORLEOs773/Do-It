@@ -149,4 +149,8 @@
     height: 100% !important;
     object-fit: contain;
   }
+
+  .task-input-container span {
+    margin-left: -200px;
+  }
 }
