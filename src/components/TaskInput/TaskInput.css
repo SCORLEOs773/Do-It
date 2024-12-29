@@ -1,0 +1,101 @@
+/* Main container for the Task Input */
+.task-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.task-form {
+  display: flex;
+  width: 100%;
+  max-width: 600px; /* Ensure the form doesn't stretch too wide */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.task-input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.task-input:focus {
+  border-color: #4caf50; /* Green color when focused */
+}
+
+.add-task-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.add-task-btn:hover {
+  background-color: #45a049;
+}
+
+.add-task-btn:active {
+  background-color: #388e3c;
+}
+
+/* Focused state for the form */
+.task-form:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.task-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.task-tracker-toggle {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-tracker-toggle:hover {
+  background-color: #45a049;
+}
+
+.task-tracker-drawer {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.task-tracker-drawer p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
