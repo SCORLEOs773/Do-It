@@ -99,7 +99,6 @@ const TaskList = () => {
         </ul>
       </div>
 
-      {/* Edit Task Modal */}
       {isEditing && (
         <div className="modal">
           <div className="modal-content">

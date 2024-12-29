@@ -10,7 +10,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Task Input */
 input[type="text"] {
   width: 100%;
   padding: 12px;
@@ -25,7 +24,6 @@ input[type="text"]:focus {
   border-color: #6c63ff;
 }
 
-/* Button */
 button {
   padding: 10px 20px;
   margin: 0 10px;
@@ -43,7 +41,6 @@ button:focus {
   outline: none;
 }
 
-/* Add Task Button */
 button[type="submit"] {
   background-color: #6c63ff;
   color: #fff;
@@ -53,14 +50,12 @@ button[type="submit"]:hover {
   background-color: #5b54e1;
 }
 
-/* Task List */
 ul {
   list-style-type: none;
   padding: 0;
   margin: 20px 0;
 }
 
-/* Task Item */
 li {
   display: flex;
   align-items: center;
@@ -72,13 +67,11 @@ li {
   transition: transform 0.3s ease;
 }
 
-/* Checkbox */
 input[type="checkbox"] {
   margin-right: 20px;
   transform: scale(1.2);
 }
 
-/* Edit and Delete buttons */
 button.edit,
 button.delete {
   background-color: #4caf50;
@@ -97,13 +90,11 @@ button.delete:hover {
   background-color: #d32f2f;
 }
 
-/* Completed Task Style */
 .completed {
   text-decoration: line-through;
   color: gray;
 }
 
-/* Modal for Editing Task */
 .modal {
   position: fixed;
   top: 0;
