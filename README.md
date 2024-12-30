@@ -92,7 +92,7 @@ To make task completion more rewarding, canvas-confetti adds celebratory animati
 
 Seamless Switching: Users can toggle themes effortlessly from the app settings or navigation bar.
 
-# Ending Summary
+# Summary
 
 **Do It** is a simple yet powerful to-do list task-tracking app designed to help you stay organized and on top of your tasks. With an easy-to-use interface and multiple themes to choose from, you can tailor the app to suit your personal preferences, whether you need a calming blue interface, an energetic orange look, or a peaceful green environment. The app is built with a user-first approach, allowing you to track your daily tasks efficiently, set reminders, and manage your to-do list seamlessly.
 
