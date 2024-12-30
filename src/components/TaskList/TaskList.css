@@ -2,13 +2,14 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  height: 450px;
-  overflow-y: scroll;
+  max-height: 450px;
 }
 
 .task-list-container {
   width: 100%;
   margin-top: 20px;
+  max-height: 360px;
+  overflow-y: scroll;
 }
 
 .task-list {

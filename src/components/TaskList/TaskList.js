@@ -7,6 +7,8 @@ import {
   toggleImportant,
 } from "../../redux/tasksSlice";
 import { FaTrash, FaStar } from "react-icons/fa";
+import { toast } from "react-toastify";
+import confetti from "canvas-confetti";
 import "./TaskList.css";
 
 const TaskList = () => {
@@ -29,9 +31,44 @@ const TaskList = () => {
   const handleSaveEdit = () => {
     if (newText.trim()) {
       dispatch(editTask({ id: taskToEdit.id, text: newText }));
+      toast.success("Task updated successfully!");
       setIsEditing(false);
       setNewText("");
     }
+  };
+
+  const handleDelete = (id) => {
+    dispatch(deleteTask(id));
+    toast.error("Task deleted!");
+  };
+
+  const handleToggleComplete = (id) => {
+    const task = tasks.find((t) => t.id === id);
+    dispatch(toggleComplete(id));
+    if (!task.completed) {
+      toast.success("Task marked as completed!");
+      triggerConfetti();
+    } else {
+      toast.info("Task marked as incomplete!");
+    }
+  };
+
+  const handleToggleImportant = (id) => {
+    const task = tasks.find((t) => t.id === id);
+    dispatch(toggleImportant(id));
+    if (!task.important) {
+      toast.warning("Task marked as important!");
+    } else {
+      toast.info("Task unmarked as important!");
+    }
+  };
+
+  const triggerConfetti = () => {
+    confetti({
+      particleCount: 350,
+      spread: 1000,
+      origin: { x: 0.5, y: 0.5 },
+    });
   };
 
   const filteredTasks = tasks.filter((task) => {
@@ -76,7 +113,7 @@ const TaskList = () => {
               <input
                 type="checkbox"
                 checked={task.completed}
-                onChange={() => dispatch(toggleComplete(task.id))}
+                onChange={() => handleToggleComplete(task.id)}
                 className="task-checkbox"
               />
               <span className="task-text" onClick={() => handleEditClick(task)}>
@@ -84,13 +121,13 @@ const TaskList = () => {
               </span>
               <button
                 className={`star-btn ${task.important ? "active" : ""}`}
-                onClick={() => dispatch(toggleImportant(task.id))}
+                onClick={() => handleToggleImportant(task.id)}
               >
                 <FaStar />
               </button>
               <button
                 className="delete-btn"
-                onClick={() => dispatch(deleteTask(task.id))}
+                onClick={() => handleDelete(task.id)}
               >
                 <FaTrash />
               </button>

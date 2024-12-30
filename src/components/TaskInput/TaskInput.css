@@ -10,8 +10,15 @@
 
 .task-input-container span {
   margin-top: 6px;
-  color: darkgrey;
+  color: rgba(0, 0, 0, 0.348);
   margin-left: -400px;
+}
+
+.help-text {
+  background-color: #ffffff2f;
+  padding: 1px;
+  padding-inline: 8px;
+  border-radius: 10px;
 }
 
 .task-form {

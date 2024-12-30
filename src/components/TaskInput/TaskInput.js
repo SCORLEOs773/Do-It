@@ -11,6 +11,7 @@ import {
   LinearScale,
 } from "chart.js";
 import { addTask } from "../../redux/tasksSlice";
+import { toast } from "react-toastify";
 import "./TaskInput.css";
 
 ChartJS.register(
@@ -30,7 +31,10 @@ const TaskInput = () => {
     e.preventDefault();
     if (task.trim()) {
       dispatch(addTask(task));
+      toast.success("Task added successfully!");
       setTask("");
+    } else {
+      toast.error("Task cannot be empty!");
     }
   };
 
